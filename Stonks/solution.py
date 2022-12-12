@@ -33,8 +33,4 @@ if __name__ == "__main__":
 
         s.send(exploit.encode())
         print_server(s, "Portfolio")
-
-        with open("data.bin", "r") as f:
-            data = f.read()
-            print(type(data))
  
