@@ -1,0 +1,6 @@
+Solution Description
+
+buy_stocks(...) is the vulnerable function. The function statically loads the API key, meaning that it is stored on the stack.
+The function then calls printf on a 300 byte string of user input. By inputting "%p" 150 times, the printf function will pop the stack
+and print the last 150 stack slots. My solution uses Python socket programming to capture the printed stack. To find the flag, I pasted
+the stack into a CyberChef recipe that accounts for endianness.
